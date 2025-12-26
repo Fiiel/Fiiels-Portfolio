@@ -25,3 +25,46 @@ var options = {
 };
 
 new Typed('.typefield h2', options);
+
+
+const shuffleInstance = new Shuffle(document.querySelector('#projects .project-items'), {
+    itemSelector: '.item',
+});
+
+const filterButtons = document.querySelectorAll('#projects .filters button')
+
+filterButtons.forEach((item) => {
+    item.addEventListener('click', workFilter)
+})
+
+function workFilter() {
+    const clickedButton = event.currentTarget;
+    const clickedButtonGroup = clickedButton.getAttribute('data-group');
+    const activeButton = document.querySelector('#projects .filters button.active')
+
+    activeButton.classList.remove('active');
+    clickedButton.classList.add("active");
+
+
+    shuffleInstance.filter(clickedButtonGroup)
+}
+
+const projectModal = new bootstrap.Modal(document.getElementById('projectModal'))
+const projectElements = document.querySelectorAll("#projects .project-items .wrap");
+
+projectElements.forEach((item) => {
+    item.addEventListener('click', function() {
+        projectModal.show();
+    })
+})
+
+const projectModalElement = document.getElementById('projectModal')
+projectModalElement.addEventListener('show.bs.modal', event => {
+    document.getElementById('projects').classList.add('blur');
+    document.getElementById('sidebar').classList.add('blur');
+})
+
+projectModalElement.addEventListener('hide.bs.modal', event => {
+    document.getElementById('projects').classList.remove('blur');
+    document.getElementById('sidebar').classList.remove('blur');
+})
