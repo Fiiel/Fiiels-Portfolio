@@ -8,8 +8,10 @@ navLinks.forEach((item) => {
         document.querySelector('main > section.active').classList.remove('active');
         document.querySelector(`main > section${item.getAttribute('href')}`).classList.add('active');
     })
-    
 })
+
+
+
 
 document.querySelector('#sidebar .toggle-sidebar').addEventListener('click', function(){
     document.querySelector('#sidebar').classList.toggle('open')

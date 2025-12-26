@@ -1,10 +1,19 @@
+html {
+    scroll-behavior: smooth;
+}
+
 main {
     padding-left: 102px;
 
     > section {
-        display: none;
-        padding-right: 114px;
-        padding-left: 114px;
+        display: block;
+        padding-right: 32px;
+        padding-left: 32px;
+        min-height: 100vh;
+
+        &:not(#home) {
+            padding-top: 64px;
+        }
 
         &.active {
             display: block;
