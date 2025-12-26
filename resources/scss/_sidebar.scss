@@ -57,30 +57,30 @@
                         }
                     }
 
-                    &:before {
-                        content: "";
-                        position: absolute;
-                        width: 46px;
-                        height: 46px;
-                        border-radius: 50%;
-                        background: #658df2;
-                        opacity: 0;
-                        top: 50%;
-                        left: 50%;
-                        transform: translate(-50%, -50%) scale(0);
-                        transition: all 0.3s
-                    }
+                    // &:before {
+                    //     content: "";
+                    //     position: absolute;
+                    //     width: 46px;
+                    //     height: 46px;
+                    //     border-radius: 50%;
+                    //     background: #658df2;
+                    //     opacity: 0;
+                    //     top: 50%;
+                    //     left: 50%;
+                    //     transform: translate(-50%, -50%) scale(0);
+                    //     transition: all 0.3s
+                    // }
 
-                    &.active {
-                        &:before {
-                            opacity: 15%;
-                            transform: translate(-50%, -50%) scale(1);
-                        }
+                    // &.active {
+                    //     &:before {
+                    //         opacity: 15%;
+                    //         transform: translate(-50%, -50%) scale(1);
+                    //     }
 
-                        i {
-                            color: #658df2;
-                        }
-                    }
+                    //     i {
+                    //         color: #658df2;
+                    //     }
+                    // }
 
                     span {
                         display: none;
