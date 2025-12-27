@@ -367,6 +367,7 @@ main > section.active {
   color: #808185;
   border: none;
   padding-top: 8px;
+  padding-bottom: 8px;
   padding-right: 16px;
   padding-left: 16px;
   margin-right: 8px;
@@ -377,6 +378,7 @@ main > section.active {
   color: #fff;
   background: #1e1e20;
   border-radius: 8px;
+  padding-bottom: 8px;
 }
 #projects .project-items .item {
   margin-bottom: 24px;
